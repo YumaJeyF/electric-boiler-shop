@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html', {
+        'title': 'Оптовым покупателям'
+    })
+<body>
+    <div class="container">
+        @@include('html/header.html', {
+            'width': 'search--main',
+            'display': 'style="display: flex"',
+            'user': 'style="display: none"'
+        })
+        <main class="main">
+            <div class="main__body main__body--nav-link-page">
+                <section class="contacts">
+                    @@include('html/nav.html', {
+                        'current-page': 'Оптовым покупателям'
+                    })
+                    <h1 class="sec-title main__main-title contacts__title" data-change-view>Оптовым покупателям</h1>
+                    <div class="contacts__body">
+                        <section class="inf-left">
+                        <div class="inf-left__body" data-main-change-back>
+                            <p class="inf-left__text text" data-change-view>Условия оптовых заказов решаются индивидуально по телефону: <strong class="strong-text" data-change-view>+7 (555) 55-55-555</strong></p>
+                            <p class="inf-left__text text" data-change-view>Либо опишите суть заказа в форме обртной связи и мы с вами свяжемся.</p>
+                        </div>
+                        </section>
+                        @@include('html/form.html')
+                    </div>
+                </section>
+            </div>
+        </main>
+        @@include('html/footer.html')
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+    'title': 'Контакты'
+})
+<body>
+    <div class="container">
+        @@include('html/header.html', {
+            'width': 'search--main',
+            'display': 'style="display: flex"',
+            'user': 'style="display: none"'
+        })
+        <main class="main">
+            <div class="main__body main__body--nav-link-page">
+                @@include('html/nav.html', {
+                    'current-page': 'Контакты'
+                })
+                <section class="contacts">
+                    <h1 class="sec-title main__main-title contacts__title" data-change-view>Контакты</h1>
+                    <div class="contacts__body">
+                        <section class="our-contacts">
+                            <div class="our-contacts__body" data-main-change-back>
+                                <h1 class="title-contacts our-contacts__title" data-change-view>Магазин деталей для газовых котлов</h1>
+                                <p class="text our-contacts__text" data-change-view>Офис: <strong class="strong-text" data-change-view>г.Москва, ул...д...</strong></p>
+                                <p class="text our-contacts__text" data-change-view>Склад: <strong class="strong-text" data-change-view>г.Москва, ул...д...</strong></p>
+                                <p class="text our-contacts__text" data-change-view>График работы офиса: <strong class="strong-text" data-change-view>пн-пс: с 8:00 до 22:00</strong></p>
+                                <p class="text our-contacts__text" data-change-view>Наш контактный телефон: <strong class="strong-text" data-change-view>+7(8095) 555-55-55</strong></p>
+                                <p class="text our-contacts__text" data-change-view>Время приемок завок: <strong class="strong-text" data-change-view>Пн-Вс: с 8:00 до 22:00</strong></p>
+                                <p class="text our-contacts__text" data-change-view>Прием заказов электронным способом на сайте: <strong class="strong-text" data-change-view>круглосуточно</strong></p>
+                                <p class="text our-contacts__text" data-change-view>E-mail: <strong class="strong-text strong-text--email" data-change-view>
+                                    <svg class="our-contacts__email-icon" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path data-change-stroke-icon class="our-contacts__icon-email" d="M2.66659 3.16699H13.3333C14.0666 3.16699 14.6666 3.76699 14.6666 4.50033V12.5003C14.6666 13.2337 14.0666 13.8337 13.3333 13.8337H2.66659C1.93325 13.8337 1.33325 13.2337 1.33325 12.5003V4.50033C1.33325 3.76699 1.93325 3.16699 2.66659 3.16699Z" stroke="#2D2D2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path data-change-stroke-icon class="our-contacts__icon-email" d="M14.6666 4.5L7.99992 9.16667L1.33325 4.5" stroke="#2D2D2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    info@zapchasti.com.ru
+                                </strong></p>
+                            </div>
+                        </section>
+                        @@include('html/form.html')
+                    </div>
+                </section>
+            </div>
+        </main>
+        @@include('html/footer.html')
+    </div>
+</body>
+</html>

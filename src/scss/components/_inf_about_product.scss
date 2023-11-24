@@ -1,0 +1,422 @@
+@use './vars' as *;
+
+// Миксины
+
+@use './mixins' as *;
+
+// Расширения
+
+@use './extends';
+
+// Style for information products
+
+.main {
+
+    &__body {
+        &--inf-product {
+            padding-bottom: 70px;
+            @media (max-width: 992px) {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.product-inf {
+
+        &__body {
+            padding: $middle;
+            background-color: $wh;
+            box-shadow: $main-shadow;
+            border-radius: $rad;
+            margin-top: 51px;
+            margin-bottom: 86px;
+            @media (max-width: 992px) {
+                box-shadow: none;
+                background: none;
+                padding: 0;
+                margin-bottom: 34px;
+            }
+            @media (max-width: 490px) {
+                margin-bottom: $big;
+                margin-top: $gap-big;
+            }
+        }
+
+        &__body-inf {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(400px, 648px));
+            grid-template-rows: repeat(3, minmax());
+            column-gap: $gap-big;
+            row-gap: $mid-b;
+
+            @media (max-width: 1200px) {
+                column-gap: $middle;
+            }
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+
+		&__slider {
+            
+            @media (max-width: 992px) {
+                background-color: $wh;
+                box-shadow: $main-shadow;
+                overflow: hidden;
+                padding: $fz;
+                margin-bottom: $fz ;
+            }
+
+            @media (max-width: 490px) {
+                padding: $fz $very-low;
+                margin-bottom: $middle;
+            }
+
+		}
+
+        &__slider-second {
+            margin: 0;
+            margin-top: $fz;
+        }
+
+		&__description-product {
+            max-width: 696px;
+            @media (max-width: 992px) {
+                max-width: none;
+            }
+		}
+
+        &__title {
+            grid-row: 1 / 1;
+            grid-column: 1 / 3;
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        &__title-mobile {
+            display: none;
+            @media (max-width: 992px) {
+                display: block;
+                margin-bottom: $fz;
+            }
+            @media (max-width: 768px) {
+                font-size: $lower;
+            }
+        }
+
+        &__acc-first {
+            @media (max-width: 992px) {
+                margin-bottom: $middle;
+            }
+        }
+}
+
+.swiper-first {
+    @include sizeLimit(927px, 455px);
+    margin: 0;
+
+    @media (max-width: 992px) {
+        overflow: visible;
+    }
+
+    &__pic {
+        @include picSlider(648px, 455px);
+    }
+
+    &__img {
+        @extend %max;
+        object-fit: cover;
+
+        &--fly {
+            @extend %fly;         
+        }
+    }
+
+    .swiper-slide {
+        @include sizeLimit(648px, 455px);
+    }
+}
+
+.swiper-second {
+    max-width: 648px;
+    height: 173px;
+    @media (max-width: 992px) {
+        display: none;
+    }
+
+    &__pic {
+        @include picSlider(166px, 149px);
+        height: 100%;
+    }
+
+    &__img {
+        @extend %max;
+        object-fit: cover;
+    }
+
+    .swiper-scrollbar {
+        left: 0;
+        height: $very-low;
+        background-color: $very-light-grey;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .swiper-scrollbar-drag {
+        background-color: $gr;
+    }
+    
+}
+
+.description {
+
+    &--mobile-short-inf {
+        display: none;
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
+
+    &--desktop-short-inf {
+        @media (max-width: 992px) {
+            display: none;
+        }
+    }
+
+		&__price {
+            @media (max-width: 992px) {
+                margin-bottom: $fz;
+            }
+            @media (max-width: 490px) {
+                font-size: $lower;
+            }
+		}
+
+		&__warehouse {
+            color: $green;
+            margin: $middle 0;
+            font-weight: $defFw;
+            @media (max-width: 1200px) {
+                margin: $fz 0;
+            }
+            @media (max-width: 490px) {
+                font-size: $mobile;                
+            }
+		}
+
+		&__article {
+            font-size: $add-fz;
+            color: $main;
+            margin-bottom: $middle;
+            @media (max-width: 1200px) {
+                margin: $fz 0;
+            }
+            @media (max-width: 490px) {
+                font-size: $fz;
+            }
+		}
+
+		&__btn {
+            user-select: none;
+            padding: 0;
+            @extend %flex;
+            @extend %reset-btn;
+            gap: $fz;
+            color: $main;
+            font-size: 20px;
+            padding: 13px 45px;
+            background-color: $yelBtn;
+            border-radius: $rad;
+            line-height: 28px;
+            margin-bottom: $gap-big;
+
+            @media (max-width: 992px) {
+                margin: 0;
+                width: 100%;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            @media (max-width: 490px) {
+                font-size: $fz;
+                gap: $very-low;
+            }
+
+            &--clicked {
+                pointer-events: none;
+                cursor: default;
+                background-color: $vg
+            }
+
+		}
+}
+
+.tabs {
+		&__btns {
+            @extend %flex;
+            @media (max-width: 992px) {
+                display: block;
+            }
+		}
+
+		&__btn {
+            @extend %reset-btn;
+            font-size: $add-fz;
+            font-weight: $fwm;
+            padding: 0;
+            transition: all 0.3s ease;
+
+            &--first {
+                @media (min-width: 993px) {
+                    padding-right: $fz;
+                }
+            }
+
+            &--second {
+                @media (min-width: 993px) {
+                    padding-left: $fz;
+                    border-left: 1px solid $catalog-line;   
+                }
+                
+            }
+		}
+
+        &__inf {
+            display: none;
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+		&__title {
+            margin: 0;
+            padding-top: $middle;
+            font-size: $middle;
+            font-weight: $defFw;
+            @media (max-width: 992px) {
+                padding-top: 0;
+                font-weight: $fwm;
+                font-size: $add-fz;
+            }
+		}
+
+		&__text {
+            margin: $big 0;
+            @media (max-width: 1200px) {
+                margin: $middle 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+		}
+}
+
+.liked-it {
+    &__title {
+        @media (max-width: 992px) {
+            font-size: $lower;
+        }
+
+    }
+
+    &__swiper {
+        padding: 54px 0 10px 0;
+        @media (max-width: 992px) {
+            padding: $middle 0 $lower 0;
+        }
+    }
+}
+
+.accordeon-product {
+
+    @media (max-width: 992px) {
+        background-color: $wh;
+        box-shadow: $main-shadow;
+    }
+
+    &__content {
+        padding: 0 $fz;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        display: none;
+        transition: all 0.3s ease-in;
+
+        @media (max-width: 992px) {
+            display: block;
+        }
+
+        @media (max-width: 490px) {
+            padding: 0 $very-low;
+        }
+
+        &--active {
+            visibility: visible;
+            padding: $middle $fz;
+            @media (max-width: 490px) {
+                padding: $middle $very-low;
+            }
+        }
+
+        &--compatibility {
+            padding-top: 0;
+        }
+    }
+
+    &__text {
+        display: none;
+        @media (max-width: 992px) {
+            display: block;
+        }
+        @media (max-width: 400px) {
+            font-size: $fz;
+        }
+    }
+
+    &__common {
+        @media (max-width: 992px) {
+            display: flex;
+            align-items: center;
+            background-color: $wh;
+            padding: $middle $lower $middle $fz;
+            box-shadow: $main-shadow;
+        }
+        @media (max-width: 490px) {
+            padding: $fz $very-low;
+        }
+    }
+
+    &__icon {
+        margin-left: auto;
+        transition: all 0.3s ease;
+        display: none;
+
+        &--active {
+            transform: rotate(180deg);
+        }
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
+
+    &__btn {
+        background: none !important;
+        @media (max-width: 490px) {
+            &--active {
+                font-size: $lower;
+            }    
+        }
+    }
+}
+
+._active {
+    color: $red;
+}
+
+._open {
+    display: block;
+}

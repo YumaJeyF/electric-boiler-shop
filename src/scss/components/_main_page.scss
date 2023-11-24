@@ -1,0 +1,400 @@
+@use './vars' as *;
+
+// Миксины
+
+@use './mixins' as *;
+
+// Расширения
+
+@use './extends';
+
+.sec-title {
+    margin: 0;
+    font-size: $sec;
+    color: $dark;
+    font-weight: $fwm;
+    line-height: 47.7px;
+    @media (max-width: 768px) {
+        font-size: $fz;
+        font-weight: $defFw;
+    }
+}
+
+// Style for main page
+
+.main {
+
+    &__body {
+        max-width: 1440px;
+        margin: auto;
+        padding-top: $mini;
+
+        &--main {
+            padding-bottom: 130px;
+            @media (max-width: 1366px) {
+                padding-bottom: 81px;
+            }
+            @media (max-width: 768px) {
+                padding-bottom: 32px;
+            }
+        }
+
+        @media (max-width: 1470px) {
+            margin: 0 16px;
+        }
+        @media (max-width: 425px) {
+            margin: 0 8px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 55px;
+        margin: 0 0 48px 0;
+        @media (max-width: 992px) {
+            font-size: 40px;   
+        }
+        @media (max-width: 768px) {
+            font-size: 22px;
+            margin-bottom: 24px;
+        }
+    }
+
+}
+
+.control-menu {
+    &__body {
+        background-color: $wh;
+        box-shadow: $main-shadow;
+        padding: 16px;
+        margin: 20px 0 48px 0;
+        border-radius: $rad;
+        position: relative;
+        @extend %flex;
+
+        @media (max-width: 1366px) {
+            margin-top: 12px ;
+        }
+
+        @media (max-width: 768px) {
+            padding-bottom: 8px;
+            margin: 0 0 32px 0;
+        }
+
+        @media (max-width: 440px) {
+            display: block;
+            padding: 12px 8px;
+            margin: 4px 0 24px 0;
+        }
+    }
+
+    &__quantity-product {
+        margin-bottom: 8px;
+        @extend %text-inf;
+    }
+
+    &__price-inf {
+        margin: 0;
+        @extend %text-inf;
+    }
+
+    &__right {
+        margin-left: auto;
+        @include flex(32px);
+        @media (max-width: 768px) {
+            gap: 16px;
+        }
+    }
+
+    &__btn-basket {
+        @include btn(1px solid $bl, $bl, $back-btn, $add-fz, 8px, $big);
+        @media (max-width: 768px) {
+            font-size: $mobile;
+        }
+        @media (max-width: 640px) {
+            display: none;
+        }
+    }
+
+    &__btn-place-order {
+        @include  btn(none, $wh, $bl, $add-fz, 8px, $big);
+        @media (max-width: 768px) {
+            font-size: $mobile;
+        }
+        @media (max-width: 440px) {
+            width: 100%;
+            margin-top: 16px;
+        }
+    }
+
+    &__btn-close {
+        margin-bottom: auto;
+        margin-left: 45px;
+        @extend %reset-btn;
+        width: 15px;
+        height: 15px;
+        position: relative;
+        &::after {
+            content: '';
+            @include line-close(45deg, 100%);
+        }
+
+        &::before {
+            content: '';
+            @include line-close(-45deg, 100%);
+
+        }
+
+        @media (max-width: 768px) {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 440px) {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+        }
+    }
+}
+
+// Swiper company logos
+
+.company-logos {
+    &__logo {
+        @extend %flex;
+        justify-content: center;
+    }
+
+    &__pic {
+        @media (max-width: 950px) {
+            width: 106px;
+            height: 32px;
+        }
+    }
+}
+
+.swiper-company {
+    .swiper-wrapper {
+        align-items: center;
+        padding: 10px 0 10px 0;
+    }
+
+    .swiper-slide {
+        padding: 12px 16px;
+        background-color: $wh;
+        box-shadow: $main-shadow;
+        border-radius: $rad;
+    } 
+
+    .swiper-button-next, 
+    .swiper-button-prev {
+        width: 49px;
+        height: 49px;
+        background-color: $wh;
+        border-radius: 100%;
+        box-shadow: 0px 0px 14px 0px rgba(34, 60, 80, 0.2);
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $yelBtn;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+        opacity: 1;
+    }
+
+}
+
+// Style for title details
+
+.title-main {
+    font-size: $main-title;
+    font-weight: $fwm;
+    margin: 0;
+    color: $dark;
+    &--main-page {
+        margin: 38px 0 48px 0;
+        @media (max-width: 768px) {
+            margin-top: 22px;
+            font-size: 34px;
+        }
+        @media (max-width: 320px) {
+            display: none;
+        }
+    }
+}
+
+.title-second {
+    margin: 0;
+    font-size: $sec;
+    font-weight: $fwm;
+    color: $dark;
+    &--main-page {
+        margin-bottom: 48px;
+        @media (max-width: 768px) {
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &--new-product {
+        margin-top: 80px;
+        @media (max-width: 768px) {
+            margin-top: 32px;
+        }
+    }
+
+    &--sales-hits {
+        @media (max-width: 320px) {
+            margin-top: 64px;
+        }
+    }
+}
+
+.main-text {
+    color: $main;
+    font-weight: $defFw;
+    font-size: $add-fz;
+}
+
+.product {
+    &__body {
+        background-color: $wh;
+        box-shadow: 0px 2px 8px 0px #0000001A;
+        padding: 24px 16px;
+        border-radius: $rad;
+        transition: all 0.2s;
+        @media (max-width: 768px) {
+            padding: 16px;
+        }
+        @media (max-width: 425px) {
+            padding: 16px 8px;
+        }
+
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
+
+    &__pic {
+        position: relative;
+        overflow: hidden;
+        border-radius: $rad;
+        max-width: 316px;
+        max-height: 184px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s;
+        cursor: pointer;
+        max-width: 316px;
+        max-height: 184px;
+        user-select: none;
+
+        &--fly {
+            @extend %fly;         
+        }
+    }
+
+    &__name {
+        margin: 24px 0;
+        @media (max-width: 768px) {
+            margin: 16px 0;
+            font-size: 15px;
+        }
+    }
+
+    &__article {
+        color: $add-cl;
+        font-weight: $defFw;
+        font-size: $mobile;
+        margin: 0;
+        @media (max-width: 768px) {
+            font-size: $tr;
+        }
+    }
+
+    &__price {
+        color: $dark;
+        font-weight: $fwm;
+        font-size: 20px;
+        margin: 0;
+        cursor: pointer;
+        text-decoration: none;
+        @media (max-width: 425px) {
+            font-size: 17px;
+        }
+    }
+
+    &__inf {
+        margin-top: 24px;
+        @media (max-width: 768px) {
+            margin-top: 16px;
+        }
+    }
+
+    &__icon {
+        margin-left: auto;
+        background-color: $yelBtn;
+        border-radius: $rad;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s;
+        width: 40px;
+        height: 40px;
+        @extend %flex;
+        justify-content: center;
+
+        &--active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &--add {
+            background-color: $green;
+        }
+    }
+}
+
+// About us
+
+.about-us {
+
+    &__title {
+        margin: 80px 0 48px 0;
+        @media (max-width: 768px) {
+            margin: 48px 0 8px 0;
+            line-height: 24.03px;
+            font-weight: $fwm;
+        }
+        @media (max-width: 320px) {
+            margin-top: 32px;
+        }
+    }
+
+    &__content {
+        max-width: 1076px;
+    }
+
+    &__text {
+        font-size: $mobile;
+        color: $main;
+        line-height: 21px;
+        font-weight: $defFw;
+        margin: 0;
+        @media (max-width: 768px) {
+            font-size: $tr;
+        }
+    }
+}

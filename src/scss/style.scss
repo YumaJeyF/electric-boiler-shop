@@ -1,0 +1,30 @@
+// Шрифты
+
+// Переменные 
+
+@use './vars' as *;
+
+// Миксины
+
+@use './mixins' as *;
+
+// Расширения
+
+@use './extends';
+
+// Стили для свайпера
+
+@use '../../node_modules/swiper/swiper-bundle.min.css';
+
+// Стили для страниц
+
+@use './components/header';
+@use './components/footer';
+@use './components/main_page';
+@use './components/catalog';
+@use './components/inf_about_product';
+@use './components/cart';
+@use './components/wholesale_buyers';
+@use './components/contacts';
+@use './components/about_company';
+@use './components/delivery_and_payment';

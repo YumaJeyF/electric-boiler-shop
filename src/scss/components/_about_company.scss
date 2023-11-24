@@ -1,0 +1,84 @@
+@use './vars' as *;
+
+// Миксины
+
+@use './mixins' as *;
+
+// Расширения
+
+@use './extends';
+
+// Style for about company
+
+.about-company {
+
+    &__pic {
+        max-width: 1359px;
+        &--first {
+            display: flex;
+            margin-left: auto;
+            padding-top: 143px;
+            @media (max-width: 992px) {
+                padding-top: 0;
+            }
+        }
+
+        &--second {
+            display: flex;
+            margin-right: auto;
+            margin-top: $vos;
+        }
+
+        @media (max-width: 992px) {
+            margin-top: $big;
+        }
+
+        @media (max-width: 478px) {
+            max-height: 305px;
+            min-height: 237px;
+            position: relative;
+        }
+    }
+
+    &__img {
+        @extend %max;
+        @media (max-width: 478px) {
+            position: absolute;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        @media (max-width: 768px) {
+            margin-bottom: $mobile;
+        }
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__block-text {
+        background-color: $wh;
+        box-shadow: $main-shadow;
+        padding: $gap-big;
+        border-radius: $rad;
+        @include pos(absolute, 0, 0, auto);
+        max-width: 1253px;
+
+        @media (max-width: 992px) {
+            position: static;
+            background: none;
+            font-size: $fz;
+            padding: $mini;
+            box-shadow: none;
+        }
+    }
+
+    &__text {
+        &--first {
+            margin-bottom: $middle;
+        }
+
+    }
+}

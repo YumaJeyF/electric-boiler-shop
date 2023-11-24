@@ -1,0 +1,124 @@
+@use './vars' as *;
+
+// Миксины
+
+@use './mixins' as *;
+
+// Расширения
+
+@use './extends';
+
+// Styles for devilery and payment
+
+p { margin: 0; }
+
+.delivery-payment {
+
+    &__title {
+        @media (max-width: 768px) {
+            margin-bottom: $fz;            
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: flex-start;
+        background-color: $wh;
+        box-shadow: $main-shadow;
+        padding: $middle;
+        border-radius: $rad;
+
+        @media (max-width: 768px) {
+            display: block;
+            padding: $mini $fz $gap-big $fz;
+        }
+        
+        @media (max-width: 320px) {
+            padding: $mini $very-low;
+        }
+    }
+
+    &__questions {
+        padding-right: $middle;
+        @media (max-width: 768px) {
+            padding-right: 0;
+            padding-bottom: $fz;
+            border-bottom: 1px solid $very-light-grey;
+        }
+    }
+
+    &__answers {
+        padding-left: $middle;
+        border-left: 1px solid $very-light-grey;
+
+        @media (max-width: 768px) {
+            border-left: 0;
+            padding-left: 0;
+            padding-top: $fz;
+        }
+    }
+}
+
+.main-questions {
+
+    &__question {
+        color: $main;
+        font-size: $fz;
+        font-weight: $defFw;
+        padding: $mini $fz;
+        width: 222px;
+        box-sizing: border-box;
+        border-radius: $rad;
+        cursor: pointer;
+        margin-bottom: $mini;
+
+        @media (max-width: 768px) {
+            width: auto;
+            color: $bl;
+            padding: $mini $very-low;
+        }
+
+        &:hover {
+            color: $red;
+        }
+
+        @media (hover:hover) {
+            &:hover {
+                color: $red !important;
+            }
+        }
+
+        @media (hover:none) {
+            &:active {
+                color: $red !important;
+            }
+        }
+    }
+}
+
+.answers-on-questions {
+
+    &__block-texts {
+        display: none;
+    }
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: $middle;
+
+            @media (max-width: 768px) {
+                font-size: $fz;
+                margin-bottom: $fz;
+            }
+        }
+    }
+}
+
+._open {
+    display: block;
+}
+
+._active {
+    background-color: $lite-green;
+    color: $red !important;
+}

@@ -1,0 +1,78 @@
+@use './vars' as *;
+
+// Миксины
+
+@use './mixins' as *;
+
+// Расширения
+
+@use './extends';
+
+
+// Style for contacts
+
+.our-contacts {
+    &__body {
+        @extend %contactsBody;
+    }
+
+    &__title {
+        padding-bottom: $mini;
+        border-bottom: 1px solid $very-light-grey;
+    }
+
+    &__text {
+        display: flex;
+        align-items: flex-start;
+        gap: $fz;
+        margin-top: $middle;
+        @media (max-width: 835px) {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            margin-top: $fz;
+        }
+        @media (max-width: 320px) {
+            margin-top: $middle;
+        }
+        &:nth-child(5) {
+            @media (max-width: 768px) {
+                margin-top: $middle;
+            }
+        }
+        &:nth-child(2) {
+            @media (max-width: 768px) {
+                margin-top: $middle;
+            }
+        }
+
+        &:nth-child(3) {
+            margin-top: $fz;
+            @media (max-width: 768px) {
+                margin-top: $very-low;
+            }
+            @media (max-width: 320px) {
+                margin-top: $fz;
+            }
+        }
+     }
+
+    &__email-icon {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}
+
+.strong-text {
+    @media (max-width: 320px) {
+        display: block;
+    }
+
+    &--email {
+        @extend %flex;
+        gap: $very-low;
+        @media (max-width: 768px) {
+        }
+    }
+}

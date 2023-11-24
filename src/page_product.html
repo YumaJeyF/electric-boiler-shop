@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+    'title': 'Информация о товаре'
+})
+<body>
+    <div class="container">
+        @@include('html/header.html', {
+          'width':'search--main',
+          'display': 'style="display: flex"',
+          'user': 'style="display: none"'
+        })
+        <main class="main">
+            <div class="main__body main__body--inf-product">
+                <section class="product-inf">
+                    <div class="product-inf__body">
+
+                    <div class="product-inf__body-inf">
+                      <h1 class="title-second product-inf__title" data-product-title="true" data-change-view></h1>
+
+                      <div class="product-inf__slider">
+                        <h1 class="title-second product-inf__title-mobile">Улитка циркуляционного насоса Wilo Bosch WBN 6000/2000 против часовой стрелки</h1>
+                        <div class="swiper swiper-first">
+                            <div class="swiper-wrapper swiper-first__swiper-wrapper product-inf__swiper-wrapper">
+                            </div>
+                          </div>
+
+                          <div class="swiper swiper-second product-inf__slider-second">
+                            <div class="swiper-wrapper swiper-second__swiper-wrapper product-inf__swiper-wrapper">
+
+
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                          </div>
+                          <div class="description description--mobile-short-inf">
+                            <p class="description__warehouse"></p>
+                            <p class="description__article" data-change-view></p>
+                            <p class="title-second description__price" data-change-view></p>
+                            <button class="description__btn">
+                              <img src="@img/basket.svg" alt="basket" class="description__basket">
+                              Положить в корзину
+                            </button>
+                          </div>
+                                                    
+                      </div>
+                      <div class="product-inf__description-product">
+                        <div class="description description--desktop-short-inf">
+                          <p class="title-second description__price" data-change-view></p>
+                          <p class="description__warehouse"></p>
+                          <p class="description__article" data-change-view></p>
+                          <button class="description__btn">
+                            <img src="@img/basket.svg" alt="basket" class="description__basket">
+                            Положить в корзину
+                          </button>
+                        </div>
+                          <div class="tabs">
+                            <div class="tabs__btns">
+                              <div class="accordeon-product product-inf__acc-first">
+                                <div class="accordeon-product__common"  data-accordeon-product="#desc1">
+                                  <button class="tabs__btn tabs__btn--first accordeon-product__btn" data-change-view data-tabs="#description">Описание</button>
+                                  <svg width="15" height="9" viewBox="0 0 15 9" class="accordeon-product__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1.5L7.5 7.5L13.5 1.5" stroke="#1C629E" stroke-width="1.5"/>
+                                  </svg>
+                                    
+                                </div>
+                                <div class="tabs__inf accordeon-product__content" id="desc1" data-description="true">
+                                  <h1 class="tabs__title" data-product-title="true" data-change-view></h1>
+                                </div>
+                              </div>
+
+                              <div class="accordeon-product product-inf__acc-second">
+                                <div class="accordeon-product__common" data-accordeon-product="#desc2">
+                                  <button class="tabs__btn tabs__btn--second accordeon-product__btn" data-change-view data-tabs="#compatibility" data-accordeon="#desc2">Совместимость</button>
+                                  <svg width="15" height="9" viewBox="0 0 15 9" class="accordeon-product__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1.5L7.5 7.5L13.5 1.5" stroke="#1C629E" stroke-width="1.5"/>
+                                  </svg>
+                                </div>
+                                <div class="tabs__inf accordeon-product__content accordeon-product__content--compatibility" id="desc2" data-compatibility>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- табы товара -->
+
+                            <div class="tabs__inf" id="description" data-description="true" data-content-tabs>
+                              <h1 class="tabs__title" data-product-title="true" data-change-view="true"></h1>
+                            </div>
+
+                            <div class="tabs__inf" id="compatibility" data-compatibility data-content-tabs></div>
+                          </div>
+                      </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="liked-it">
+                  <div class="like-it__body">
+                    <h1 class="title-second liked-it__title" data-change-view>Вам понравится</h1>
+                    <div class="swiper liked-it__swiper">
+                      <div class="swiper-wrapper liked-it__swiper-wrapper"></div>
+                      </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        @@include('html/footer.html')
+    </div>    
+</body>
+</html>

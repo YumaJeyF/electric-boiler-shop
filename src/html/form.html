@@ -1,0 +1,33 @@
+<section class="wholesale-form">
+    <div class="wholesale-form__body" data-main-change-back>
+        <form class="form-main" id="form">
+            <h1 class="form-main__title title-contacts" data-change-view>Форма обратной связи</h1>
+            
+            <div class="form-main__block">
+                <label class="form-main__label" data-change-view>Имя *</label>
+                <input type="text" name="name" placeholder="Select" class="form-main__field" data-reg="^[а-я ,.'-]+$" data-change-view>
+            </div>
+            <p class="form-main__error"></p>
+
+            <div class="form-main__block">
+                <label class="form-main__label" data-change-view>Контактый телефон *</label>
+                <input type="tel" name="phone" class="form-main__field" placeholder="+7" data-change-view>
+            </div>
+            <p class="form-main__error"></p>
+
+            <div class="form-main__block">
+                <label class="form-main__label" data-change-view>Email *</label>
+                <input type="email" name="email" placeholder="Select" class="form-main__field" data-reg="^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$" data-change-view>
+            </div>
+            <p class="form-main__error"></p>
+
+            <div class="form-main__block form-main__block--message">
+                <textarea name="message" placeholder="Введите ваше сообщение" rows="10" class="form-main__field form-main__field--message" data-change-view></textarea>
+            </div>
+            <p class="form-main__error"></p>
+
+            <button class="form-main__btn-sub" id="sub-btn">Отправить сообщение</button>
+        </form>
+    </div>
+    <div class="wholesale-form__load" data-main-change-back></div>
+</section>

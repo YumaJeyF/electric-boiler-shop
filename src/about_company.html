@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html', {
+        'title': 'О компании'
+    })
+<body>
+    <div class="container">
+        @@include('html/header.html', {
+            'width': 'search--secondary',
+            'display': 'style="display: flex"',
+            'user': 'style="display: none"'
+        })
+        <main class="main">
+            <div class="main__body main__body--nav-link-page">
+                @@include('html/nav.html', {
+                    'current-page': 'О компании'
+                })
+                <section class="about-company">
+                    <h1 class="sec-title main__main-title about-company__title" data-change-view>О компании</h1>
+                    <div class="about-company__body">
+                        <div class="about-company__block-text" data-main-change-back>
+                            <p class="about-company__text about-company__text--first text" data-change-view>Компания "АкваТермикс" предлагает Вам запасные части для европейских, корейских и отечественных газовых и электрических котлов. 99% запчастей представленных на сайте постоянно поддерживаются в наличии на нашем складе.</p>
+                            <p class="about-company__text text" data-change-view>Ассортимент интернет-магазина "АкваТермикс" включает в себя запасные части для котлов Arderia, Ariston, Baxi, Beretta, Bosch, Buderus, Chaffoteaux, De Dietrich, Demrad, Electrolux, Ferroli, Fondital, Immergas, Junkers, Koreastar, Nova Florida, Saunier Duval, Sime, Tiberis, Vaillant, Viessmann, Westen.</p>
+                        </div>
+                        <div class="about-company__pic about-company__pic--first">
+                            <img src="@img/photo1.png" alt="" class="about-company__img">
+                        </div>
+                        <div class="about-company__pic about-company__pic--second">
+                            <img src="@img/photo2.png" alt="" class="about-company__img">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        @@include('html/footer.html')
+    </div>
+</body>
+</html>

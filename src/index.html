@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+    'title': 'Главная'
+})
+<body data-change-view="true">
+    <div class="container">
+        @@include('html/header.html', {
+            'width': 'search--main',
+            'display': 'style="display: none"',
+            'user': 'style="display: block"'
+        })
+        <main class="main">
+            <div class="main__body main__body--main">
+                <section class="company-logos">
+                    <div class="company-logos__slider">
+                        <div class="swiper swiper-company">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany1.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany2.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany3.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany4.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany3.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany1.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany1.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany3.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany1.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany2.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany3.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany4.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany3.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany1.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany1.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                              <div class="swiper-slide company-logos__slide">
+                                <div class="company-logos__logo">
+                                    <img src="@img/logoCompany3.png" alt="" class="company-logos__pic">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-button-prev">
+                                <img src="@img/arrow-left.svg" alt="" class="company-logos__arrow-right">
+                            </div>
+                            <div class="swiper-button-next">
+                                <img src="@img/arrow-right.svg" alt="" class="company-logos__arrow-right">
+                            </div>
+                          </div>
+                    </div>
+                </section>
+                <section class="details-boilers">
+                    <div class="details-boilers__body">
+                        <h1 class="title-main title-main--main-page" data-change-view="true">Детали для газовых котлов</h1>
+                        <h2 class="title-second title-second--main-page title-second--sales-hits" data-change-view="true">Хиты продаж</h2>
+                        <div class="swiper swiper-products swiper">
+                            <div class="swiper-wrapper details-boilers__swiper-hits"></div>
+                        </div>
+
+                        <h2 class="title-second title-second--main-page title-second--new-product" data-change-view="true">Новинки</h2>
+                        <div class="swiper swiper-products">
+                            <div class="swiper-wrapper details-boilers__swiper-new"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="about-us">
+                    <div class="about-us__body">
+                        <h1 class="about-us__title sec-title" data-change-view="true">О компании</h1>
+                        <div class="about-us__content">
+                            <p class="about-us__text" data-change-view="true">Инструкции и схемы помогут разобраться в эксплуатации, определить неисправность и правильно выбрать запчасть для ремонта Вашего газового оборудования. Купить запчасть, деталь для ремонта газового котла возможно в любом населенном пункте Российской Федерации:
+                                Осуществляем доставку запчасти к газовым котлам в следующие города: Москва, Сан</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        @@include('html/footer.html')
+    </div>
+</body>
+</html>

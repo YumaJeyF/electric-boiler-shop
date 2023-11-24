@@ -1,0 +1,244 @@
+@use './vars' as *;
+
+// Миксины
+
+@use './mixins' as *;
+
+// Расширения
+
+@use './extends';
+
+.main {
+
+    &__icon-home {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        @extend %flex;
+        gap: $tr;
+        margin-bottom: $mid-b;
+        @media (max-width: 768px) {
+            margin-bottom: $middle;
+        }
+    }
+
+    &__arrow {
+        &--nav {
+            transform: rotate(180deg);
+            @media (max-width: 768px) {
+                transform: rotate(0);
+            }
+        }
+    }
+
+    &__body {
+        &--nav-link-page {
+            margin-bottom: 80px;
+            @media (max-width: 768px) {
+                margin-bottom: $big;
+            }
+        }
+    }
+
+    &__text {
+        &--desktop {
+            font-size: $mobile;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            text-decoration: none;
+            display: none;
+            @media (max-width: 768px) {
+                display: block;
+                font-size: $tr;
+            }
+        }
+    }
+
+    &__main-title {
+        margin-bottom: $gap-big;
+        @media (max-width: 768px) {
+            font-size: $lower;
+            line-height: 29.15px;
+            font-weight: $fwm;
+        }
+    }
+    
+}
+
+.contacts {
+
+    &__body {
+        display: grid;
+        grid-template-columns: minmax(auto, 803px) minmax(auto, 528px);
+        column-gap: 109px;
+    
+        @media (max-width: 1431px) {
+            column-gap: 50px;    
+        }
+        @media (max-width: 1372px) {
+            gap: $middle;
+        }
+        @media (max-width: 992px) {
+            column-gap: $fz;
+        }
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__title {
+        @media (max-width: 768px) {
+            margin-bottom: $big;
+        }
+    }
+}
+
+.text {
+    margin: 0;
+    font-size: $add-fz;
+    color: $main;
+    font-weight: $defFw;
+    line-height: 27.03px;
+
+    @media (max-width: 768px) {
+        font-size: $fz;
+        line-height: 24.03px;
+    }
+}
+
+.inf-left {
+
+    &__body {
+        @extend %contactsBody;
+    }
+
+    &__text {
+        &:nth-child(1) {
+            margin-bottom: $fz;
+        }
+
+        @media (max-width: 768px) {
+            &:nth-child(1) {
+                margin-bottom: $very-low;
+            }
+        }
+
+        @media (max-width: 320px) {
+            display: grid;
+            row-gap: $middle;
+
+            &:nth-child(1) {
+                margin-bottom: $rad-filters;
+            }
+        }
+    }
+}
+
+.strong-text {
+    color: $dark
+}
+
+.wholesale-form {
+    position: relative;
+
+    &__body {
+        @extend %stylesWholesale;
+        @media (max-width: 320px) {
+            padding: $middle $very-low;
+        }
+    }
+    
+    &__load {
+        @include pos(absolute, 0, 0, 100%);
+        height: 100%;
+        transition: all .2s ease-out;
+        background-repeat: no-repeat;
+        background-size: 150px;
+        background-position: center;
+        background-color: $wh;
+        opacity: 0;
+        visibility: hidden;
+
+        &--send-load {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.title-contacts {
+    margin: 0;
+    font-size: $middle;
+    font-weight: $defFw;
+
+    @media (max-width: 768px) {
+        font-size: $add-fz;
+        font-weight: $fwm;
+    }
+}
+
+.form-main {
+    &__title {
+        padding-bottom: $mini;
+        border-bottom: 1px solid $very-light-grey;
+    }
+
+    &__block {
+        &--message {
+            padding: $middle 0;
+            border-bottom: 1px solid $very-light-grey;
+        }
+    }
+
+    &__field {
+        display: block;
+        width: 100%;
+        font-size: $mobile;
+        border-radius: $rad;
+        border: 1px solid $grey-line;
+        padding: $pad $mini;
+        box-sizing: border-box;
+        font-size: $mobile;
+        
+        @extend %reset-btn;
+
+        &--message {
+            font-size: $fz;
+            resize: vertical;
+        }
+    }
+
+    &__btn-sub {
+        display: flex;
+        margin-left: auto;
+        margin-top: $middle;
+        @include btn(none, $wh, $bl, $add-fz, $very-low, $big);
+
+        @media (max-width: 768px) {
+            width: 100%;
+            justify-content: center;
+            font-size: $add-fz;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-weight: $defFw;
+        color: $main;
+        margin: $middle 0 $very-low 0;
+        font-size: $mobile;
+    }
+
+    &__error {
+        margin: $very-low 0 0 0;
+        font-weight: $defFw;
+        color: $red;
+    }
+}

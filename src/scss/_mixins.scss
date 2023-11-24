@@ -1,0 +1,80 @@
+// Расширения
+
+@use './extends';
+
+// Переменные 
+
+@use './vars' as *;
+
+@mixin line-burger($top) {
+    position: absolute;
+    top: $top;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $dark;
+	transition: all 0.3s;
+}
+
+@mixin pos($pos, $top, $left, $width) {
+    position: $pos;
+	top: $top;
+	left: $left;
+	width: $width;
+}
+
+@mixin flex($gap) {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin line-close($deg, $width) {
+    position: absolute;
+    display: block;
+    width: $width;
+    height: 2px;
+    background-color: $bl;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate($deg);
+}
+
+@mixin btn($br, $cl, $bc, $size, $p1, $p2) {
+    border: $br;
+    color: $cl;
+    border-radius: 4px;
+    font-size: $size;
+    padding: $p1 $p2;
+    background: $bc;
+    cursor: pointer;
+}
+
+@mixin filtersMobile($p1, $p2, $z) {
+    background-color: $wh;
+    max-width: 400px;
+    width: 400px;
+    height: 100%;
+    padding: $p1 $p2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: $z;
+
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-100%);
+}
+
+@mixin picSlider($mw, $mh) {
+    max-width: $mw;
+    max-height: $mh;
+    position: relative;
+    border-radius: $rad;
+    overflow: hidden;
+}
+
+@mixin sizeLimit($mw, $mh) {
+    max-width: $mw;
+    max-height: $mh;
+}

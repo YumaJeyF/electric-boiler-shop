@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script defer="defer" src="js/main.min.js"></script>
+    <title>Каталог</title>
+</head>
+<body>
+    <header class="header">
+    <nav class="nav">
+        <div class="nav__body">
+            <div class="nav-top nav-top--desktop">
+                <div class="nav-top__geolocation">
+                    <img src="img/geolocation.svg" alt="mark" class="nav-top__mark">
+                    <button class="nav-top__city">Москва</button>
+                </div> 
+                <ul class="navigation navigation--desktop">
+                    <li><a href="delivery_and_payment.html" class="navigation__link">Доставка и оплата</a></li>
+                    <li><a href="about_company.html" class="navigation__link">О компании</a></li>
+                    <li><a href="contacts.html" class="navigation__link">Контакты</a></li>
+                    <li><a href="wholesale_buyers.html" class="navigation__link">Оптовым покупателям</a></li>
+                </ul>
+                <div class="phone phone--desktop" style="display: flex" data-phone>
+                    <img src="img/phone.svg" alt="phone" class="phone__icon">
+                    <p class="nav__phone-text" data-change-view="yes">+7(8095) 555-55-55</p>
+                </div> 
+                <div class="nav-top__user" style="display: none">
+                    <img src="img/man.svg" class="nav-top__user-icon">
+                </div>
+            </div>
+            <div class="nav-bottom">
+                <div class="nav-bottom__body">
+                    <div class="burger">
+                        <button class="burger__btn" data-burger-btn="open">
+                            <span class="burger__line-one" id="line"></span>
+                            <span class="burger__line-two" id="line"></span>
+                            <span class="burger__line-three" id="line"></span>
+                        </button>
+                        <div class="burger__container">
+                            <div class="burger__menu">
+                                <div class="burger__btns">
+                                    <label class="theme" data-color-theme="light">
+                                        <input type="checkbox" name="color-theme" class="theme__input">
+                                        <img src="img/moon.svg" class="theme__moon">
+                                    </label>
+                                </div>
+                                <div class="nav-top nav-top--mobile">
+                                    <ul class="navigation navigation--mobile">
+                                        <li><a href="delivery_and_payment.html" class="navigation__link navigation__link--mobile" data-change-view="true">Доставка и оплата</a></li>
+                                        <li><a href="about_company.html" class="navigation__link navigation__link--mobile" data-change-view="true">О компании</a></li>
+                                        <li><a href="contacts.html" class="navigation__link navigation__link--mobile" data-change-view="true">Контакты</a></li>
+                                        <li><a href="wholesale_buyers.html" class="navigation__link navigation__link--mobile" data-change-view="true">Оптовым покупателям</a></li>
+                                    </ul>
+                                    <div class="phone phone--mobile" style="display: none;">
+                                        <img src="img/phone.svg" alt="phone" class="phone__icon">
+                                        <p class="phone__text" data-change-view="yes">+7(8095) 555-55-55</p>
+                                    </div> 
+                                    <div class="nav-top__location">
+                                        <div class="user">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class='nav-top__color-mark' data-change-icon='true' d="M15 0.000671387C6.7166 0.000671387 0 6.71595 0 15C0 23.2841 6.71594 29.9994 15 29.9994C23.2847 29.9994 30 23.2841 30 15C30 6.71595 23.2847 0.000671387 15 0.000671387ZM15 4.48565C17.7409 4.48565 19.962 6.70738 19.962 9.44699C19.962 12.1873 17.7409 14.4083 15 14.4083C12.2604 14.4083 10.0393 12.1873 10.0393 9.44699C10.0393 6.70738 12.2604 4.48565 15 4.48565ZM14.9967 26.0777C12.263 26.0777 9.75929 25.0822 7.82812 23.4343C7.35768 23.033 7.08623 22.4447 7.08623 21.8273C7.08623 19.0488 9.33497 16.8251 12.1141 16.8251H17.8872C20.667 16.8251 22.9072 19.0488 22.9072 21.8273C22.9072 22.4453 22.637 23.0324 22.1659 23.4336C20.2354 25.0822 17.731 26.0777 14.9967 26.0777Z" fill="black"/>
+                                            </svg>
+                                        </div>
+                                        <div class="nav-top__geolocation">
+                                            <svg class="nav-top__mark nav-top__mark--mobile" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class='nav-top__color-mark' data-change-icon="true" d="M0.961509 3.68478C0.706509 3.58228 0.709509 3.42978 0.978509 3.34028L10.5215 0.159276C10.786 0.071276 10.9375 0.219276 10.8635 0.478276L8.13651 10.0213C8.06151 10.2858 7.89901 10.2978 7.77801 10.0563L5.50001 5.49978L0.961509 3.68478ZM3.40651 3.58478L6.22451 4.71228L7.74451 7.75328L9.51751 1.54828L3.40601 3.58478H3.40651Z"/>
+                                            </svg>
+                                            <button class="nav-top__city" id="mobile-name-city">Москва</button>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html" class="title__text-link">
+                        <div class="title title--header">
+                            <img src="img/logo.svg" alt="logo" class="title__logo">
+                            <p class="title__text" data-change-view="yes">Детали для газовых котлов</p>
+                        </div>
+                    </a>
+                    <div class="search search--secondary search--desktop">
+                        <input type="text" name="search-inf" class="search__input" placeholder="Я ищу..." data-change-view="true">
+                        <button class="search__btn-clear"></button>
+                        <button class="search__btn">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="search__icon" data-change-icon="true" d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z" fill="#4E4C4C"/>
+                            </svg>
+                        </button>
+                        <div class="search__dropdown-menu">
+
+                        </div>
+                    </div>
+                    <div class="right-btns nav-bottom__inf-right-btns">
+                        <label class="theme theme--main" data-color-theme="light">
+                            <input type="checkbox" name="color-theme" class="theme__input" data-change-view="yes">
+                            <img src="img/moon.svg" class="theme__moon">
+                        </label>
+                        <div class="right-btns__phone" data-phone>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="right-btns__phone-icon" data-change-icon="true" d="M20.9999 15.92V18.92C21.0011 19.1985 20.944 19.4741 20.8324 19.7293C20.7209 19.9845 20.5572 20.2136 20.352 20.4018C20.1468 20.5901 19.9045 20.7335 19.6407 20.8227C19.3769 20.9119 19.0973 20.945 18.8199 20.92C15.7428 20.5856 12.7869 19.5341 10.1899 17.85C7.77376 16.3146 5.72527 14.2661 4.18993 11.85C2.49991 9.24118 1.44818 6.27097 1.11993 3.17997C1.09494 2.90344 1.12781 2.62474 1.21643 2.3616C1.30506 2.09846 1.4475 1.85666 1.6347 1.6516C1.82189 1.44653 2.04974 1.28268 2.30372 1.1705C2.55771 1.05831 2.83227 1.00024 3.10993 0.999975H6.10993C6.59524 0.995198 7.06572 1.16705 7.43369 1.48351C7.80166 1.79996 8.04201 2.23942 8.10993 2.71997C8.23656 3.68004 8.47138 4.6227 8.80993 5.52997C8.94448 5.8879 8.9736 6.27689 8.89384 6.65086C8.81408 7.02482 8.6288 7.36809 8.35993 7.63998L7.08993 8.90997C8.51349 11.4135 10.5864 13.4864 13.0899 14.91L14.3599 13.64C14.6318 13.3711 14.9751 13.1858 15.3491 13.1061C15.723 13.0263 16.112 13.0554 16.4699 13.19C17.3772 13.5285 18.3199 13.7634 19.2799 13.89C19.7657 13.9585 20.2093 14.2032 20.5265 14.5775C20.8436 14.9518 21.0121 15.4296 20.9999 15.92Z" stroke="#4E4C4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="nav__phone-text right-btns__phone-text" data-change-view="yes">+7(8095) 555-55-55</p>
+                        </div>
+
+                        <a href="cart.html" class="right-btns__link-cart">
+                            <div class="right-btns__basket">
+                                <div class="right-btns__basket-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="right-btns__icon" data-change-icon="true" fill-rule="evenodd" clip-rule="evenodd" d="M1 2C0.447715 2 0 2.44772 0 3C0 3.55228 0.447715 4 1 4H2.68121C3.08124 4 3.44277 4.2384 3.60035 4.60608L8.44161 15.9023C9.00044 17.2063 10.3963 17.9405 11.7874 17.6623L19.058 16.2082C20.1137 15.9971 20.9753 15.2365 21.3157 14.2151L23.0712 8.94868C23.7187 7.00609 22.2728 5 20.2251 5H5.94511L5.43864 3.81824C4.96591 2.71519 3.88129 2 2.68121 2H1ZM10.2799 15.1145L6.80225 7H20.2251C20.9077 7 21.3897 7.6687 21.1738 8.31623L19.4183 13.5827C19.3049 13.9231 19.0177 14.1767 18.6658 14.247L11.3952 15.7012C10.9315 15.7939 10.4662 15.5492 10.2799 15.1145Z" fill="#1C629E"/>
+                                        <path class="right-btns__icon" data-change-icon="true" d="M11 22C11 23.1046 10.1046 24 9 24C7.89543 24 7 23.1046 7 22C7 20.8954 7.89543 20 9 20C10.1046 20 11 20.8954 11 22Z" fill="#1C629E"/>
+                                        <path class="right-btns__icon" data-change-icon="true" d="M21 22C21 23.1046 20.1046 24 19 24C17.8954 24 17 23.1046 17 22C17 20.8954 17.8954 20 19 20C20.1046 20 21 20.8954 21 22Z" fill="#1C629E"/>
+                                    </svg>
+                                </div>
+                                <p class="right-btns__text" data-change-view="yes">Корзина</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+    <main class="main">
+        <div class="main__body main__body--catalog">
+            <h1 class="title-main title-main--catalog-page" data-change-view>Каталог товаров</h1>
+            <section class="active-filters">
+                <div class="current-filters">
+                    <div class="current-filters__body" data-main-change-back>
+                        <div class="filters-first">
+                            <h2 class="current-filters__title">Производитель котлов:</h2>
+                            <div class="current-filters__manufacturer">
+                            </div>
+                        </div>
+    
+                        <div class="filters-second">
+                            <h2 class="current-filters__title current-filters__title--second">Производитель запчастей:</h2>
+                            <div class="current-filters__spare-parts"></div>
+                        </div>
+    
+                        <div class="filters-third">
+                            <div class="filters-third__btns">
+                                <button class="filters-third__delete-filters delete-filters" data-btn-throw-filters="true" data-change-view>Сбросить фильтры</button>
+                                <select class="filters-third__dropdown">
+                                    <option>Сначала дешёвые</option>
+                                    <option>Дорогие</option>
+                                    <option selected>Все</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-filters active-filters__mobile-body">
+                        <div class="mobile-filters__btns">
+                            <button class="mobile-filters__btn-filter">
+                                <img src="img/icon-filter.svg" alt="" class="mobile-filters__icon">
+                                Фильтры
+                            </button>
+                            <select class="mobile-filters__dropdown filters-third__dropdown">
+                                <option>Сначала дешёвые</option>
+                                <option>Дорогие</option>
+                                <option selected>Все</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-inf">
+                <section class="filters">
+                    <div class="filters__body" data-main-change-back>
+                        <div class="accordeon">
+                            <div class="accordeon__body">
+                                <div class="accordeon__inf">
+                                    <h3 class="accordeon__title accordeon__title--first" data-acc-title="1" data-change-view data-acc-desktop>
+                                        Производитель котлов
+                                        <svg class="accordeon__icon" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="accordeon__svg" d="M1.5 1.5L7.5 7.5L13.5 1.5" stroke="#1C629E" stroke-width="1.5"/>
+                                        </svg>
+                                    </h3>
+                                    <div class="accordeon__content">
+                                        <p class="accordeon__select" data-all-value="1" data-change-view>Выбрать все</p>
+                                        <div class="accordeon__values">
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check1">
+                                                <label for="check1" class="accordeon__label" data-label="boilers" data-change-view>Ariston</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check2">
+                                                <label for="check2" class="accordeon__label" data-label="boilers" data-change-view>Chaffoteaux&Maury</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check3">
+                                                <label for="check3" class="accordeon__label" data-label="boilers" data-change-view>Baxi</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check4">
+                                                <label for="check4" class="accordeon__label" data-label="boilers" data-change-view>Bongioanni</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check5">
+                                                <label for="check5" class="accordeon__label" data-label="boilers" data-change-view>Saunier Duval</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check6">
+                                                <label for="check6" class="accordeon__label" data-label="boilers" data-change-view>Buderus</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check7">
+                                                <label for="check7" class="accordeon__label" data-label="boilers" data-change-view>Maury</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check8">
+                                                <label for="check8" class="accordeon__label" data-label="boilers" data-change-view>Aurs</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check9">
+                                                <label for="check9" class="accordeon__label" data-label="boilers" data-change-view>Kiras</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check10">
+                                                <label for="check10" class="accordeon__label" data-label="boilers" data-change-view>Phinka</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check11">
+                                                <label for="check11" class="accordeon__label" data-label="boilers" data-change-view>Polus</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check12">
+                                                <label for="check12" class="accordeon__label" data-label="boilers" data-change-view>Hems</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check13">
+                                                <label for="check13" class="accordeon__label" data-label="boilers" data-change-view>Opas</label>
+                                            </div>
+    
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check14">
+                                                <label for="check14" class="accordeon__label" data-label="boilers" data-change-view>Huana</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check15">
+                                                <label for="check15" class="accordeon__label" data-label="boilers" data-change-view>Sharp</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check16">
+                                                <label for="check16" class="accordeon__label" data-label="boilers" data-change-view>Masd</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check17">
+                                                <label for="check17" class="accordeon__label" data-label="boilers" data-change-view>Uyl</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check18">
+                                                <label for="check18" class="accordeon__label" data-label="boilers" data-change-view>Duval</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div class="accordeon__inf">
+                                    <div class="product-price">
+                                        <h3 class="accordeon__title accordeon__title--second" data-acc-title="2" data-change-view data-acc-desktop>
+                                            Цена
+                                            <svg class="accordeon__icon" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="accordeon__svg" d="M1.5 1.5L7.5 7.5L13.5 1.5" stroke="#1C629E" stroke-width="1.5"/>
+                                            </svg>
+                                        </h3>
+                                        <div class="accordeon__content">
+                                            <div class="product-price__interval-price">
+                                                <div class="product-price__inputs" id="par1">
+                                                    <input type="number" data-inp-range="0" name="price-start" placeholder="от 00 000" class="product-price__inp" data-change-view>
+                                                    <span class="product-price__dash">—</span>
+                                                    <input type="number" data-inp-range="1" name="price-end" id="" placeholder="до 00 000" class="product-price__inp" data-change-view>
+                                                </div>
+                                                <div class="range product-price__range"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordeon__inf">
+                                    <h3 class="accordeon__title accordeon__title--third" data-acc-title="3" data-change-view data-acc-desktop>
+                                        Производитель запчастей
+                                        <svg class="accordeon__icon" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="accordeon__svg" d="M1.5 1.5L7.5 7.5L13.5 1.5" stroke="#1C629E" stroke-width="1.5"/>
+                                        </svg>
+                                    </h3>
+                                    <div class="accordeon__content">
+                                        <p class="accordeon__select" data-all-value="2" data-change-view>Выбрать все</p>
+                                        <div class="accordeon__values">
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check19">
+                                                <label for="check19" class="accordeon__label" data-label="spare-parts" data-change-view>Ariston</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check20">
+                                                <label for="check20" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check21">
+                                                <label for="check21" class="accordeon__label" data-label="spare-parts" data-change-view>Baxi</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check22">
+                                                <label for="check22" class="accordeon__label" data-label="spare-parts" data-change-view>Bongioanni</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check23">
+                                                <label for="check23" class="accordeon__label" data-label="spare-parts" data-change-view>Saunier Duval</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check24">
+                                                <label for="check24" class="accordeon__label" data-label="spare-parts" data-change-view>Buderus</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check25">
+                                                <label for="check25" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check26">
+                                                <label for="check26" class="accordeon__label" data-label="spare-parts" data-change-view>Baxi</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check27">
+                                                <label for="check27" class="accordeon__label" data-label="spare-parts" data-change-view>Buderus</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check28">
+                                                <label for="check28" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check-29">
+                                                <label for="check29" class="accordeon__label" data-label="spare-parts" data-change-view>Baxi</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check30">
+                                                <label for="check30" class="accordeon__label" data-label="spare-parts" data-change-view>Buderus</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check31">
+                                                <label for="check31" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                            </div>
+    
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check32">
+                                                <label for="check32" class="accordeon__label" data-label="spare-parts" data-change-view>Ariston</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check33">
+                                                <label for="check33" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check34">
+                                                <label for="check34" class="accordeon__label" data-label="spare-parts" data-change-view>Baxi</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check35">
+                                                <label for="check35" class="accordeon__label" data-label="spare-parts" data-change-view>Bongioanni</label>
+                                            </div>
+        
+                                            <div class="accordeon__options">
+                                                <input type="checkbox" name="check-filter" class="accordeon__inp" id="check36">
+                                                <label for="check36" class="accordeon__label" data-label="spare-parts" data-change-view>Saunier Duval</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filters__btns">
+                                    <button class="filters__btn-show" data-inp-parent="#par1">Показать</button>
+                                    <button class="filters__btn-throw" data-btn-throw-filters="true">Сбросить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters-container" id="main-menu" data-mob-menu>
+                        <div class="filters-container__menu" data-main-change-back>
+                            <div class="filters-container__title-inf">
+                                <img src="img/filter-arrow-left.svg" class="filters-container__icon" data-close-arrow="#main-menu">
+                                <h2 class="filters__title filters-container__title filters-container__title--main" data-change-view>Фильтры</h2>
+                                <button class="delete-filters filters-container__throw-btn" data-btn-throw-filters="true" data-change-view>Сбросить всё</button>
+                            </div> 
+
+                            <h3 class="accordeon__title accordeon__title--first filters-container__title" data-acc-title="1" data-change-view data-acc-mobile="#acc-mob1">
+                                Производитель котлов
+                                <svg class="accordeon__icon filters-container__arrow-right" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="accordeon__svg" d="M1.5 1.5L7.5 7.5L13.5 1.5" stroke="#1C629E" stroke-width="1.5"/>
+                                </svg>
+                            </h3>
+                            <div class="filters-container__manufacturer" data-main-change-back id="acc-mob1" data-filters-sec data-mob-menu>
+                                <div class="filters-container__title-inf">
+                                    <img src="img/filter-arrow-left.svg" alt="" class="filters-container__icon" data-close-arrow="#acc-mob1">
+                                    <h2 class="filters__title filters-container__title filters-container__title--main" data-change-view>Производитель котлов</h2>
+                                    <button class="delete-filters filters-container__throw-btn" data-sec-throw="manufacturer" data-change-view>Сбросить</button>
+                                </div> 
+                                <div class="filters-container__content"> 
+                                    <p class="accordeon__select filters-container__select" data-all-value="1" data-change-view>Выбрать все</p>
+                                    <div class="accordeon__values filters-container__values">
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check1">
+                                            <label for="check1" class="accordeon__label" data-label="boilers" data-change-view>Ariston</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check2">
+                                            <label for="check2" class="accordeon__label" data-label="boilers" data-change-view>Chaffoteaux&Maury</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check3">
+                                            <label for="check3" class="accordeon__label" data-label="boilers" data-change-view>Baxi</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check4">
+                                            <label for="check4" class="accordeon__label" data-label="boilers" data-change-view>Bongioanni</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check5">
+                                            <label for="check5" class="accordeon__label" data-label="boilers" data-change-view>Saunier Duval</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check6">
+                                            <label for="check6" class="accordeon__label" data-label="boilers" data-change-view>Buderus</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check7">
+                                            <label for="check7" class="accordeon__label" data-label="boilers" data-change-view>Maury</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check8">
+                                            <label for="check8" class="accordeon__label" data-label="boilers" data-change-view>Aurs</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check9">
+                                            <label for="check9" class="accordeon__label" data-label="boilers" data-change-view>Kiras</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check10">
+                                            <label for="check10" class="accordeon__label" data-label="boilers" data-change-view>Phinka</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check11">
+                                            <label for="check11" class="accordeon__label" data-label="boilers" data-change-view>Polus</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check12">
+                                            <label for="check12" class="accordeon__label" data-label="boilers" data-change-view>Hems</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check13">
+                                            <label for="check13" class="accordeon__label" data-label="boilers" data-change-view>Opas</label>
+                                        </div>
+
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check14">
+                                            <label for="check14" class="accordeon__label" data-label="boilers" data-change-view>Huana</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check15">
+                                            <label for="check15" class="accordeon__label" data-label="boilers" data-change-view>Sharp</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check16">
+                                            <label for="check16" class="accordeon__label" data-label="boilers" data-change-view>Masd</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check17">
+                                            <label for="check17" class="accordeon__label" data-label="boilers" data-change-view>Uyl</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check18">
+                                            <label for="check18" class="accordeon__label" data-label="boilers" data-change-view>Duval</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filters__btns">
+                                    <button class="filters__btn-show filters-container__show">Показать</button>
+                                    <button class="filters__btn-throw filter-container__btn-prev" data-close-arrow="#acc-mob1">Назад</button>
+                                </div>
+                            </div>
+
+
+                            <h3 class="accordeon__title accordeon__title--third filters-container__title" data-acc-title="3" data-change-view data-acc-mobile="#acc-mob2">
+                                Производитель запчастей
+                                <svg class="accordeon__icon filters-container__arrow-right" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="accordeon__svg" d="M1.5 1.5L7.5 7.5L13.5 1.5" stroke="#1C629E" stroke-width="1.5"/>
+                                </svg>
+                            </h3>
+                            <div class="filters-container__spare-parts" data-main-change-back id="acc-mob2" data-filters-sec data-mob-menu>
+                                <div class="filters-container__title-inf">
+                                    <img src="img/filter-arrow-left.svg" alt="" class="filters-container__icon" data-close-arrow="#acc-mob2">
+                                    <h2 class="filters__title filters-container__title filters-container__title--main" data-change-view>Производитель запчастей</h2>
+                                    <button class="delete-filters filters-container__throw-btn" data-sec-throw="spare-parts" data-change-view>Сбросить</button>
+                                </div> 
+
+                                <div class="filters-container__content">
+                                    <p class="accordeon__select filters-container__select" data-all-value="2" data-change-view>Выбрать все</p>
+                                    <div class="accordeon__values filters-container__values">
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check19">
+                                            <label for="check19" class="accordeon__label" data-label="spare-parts" data-change-view>Ariston</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check20">
+                                            <label for="check20" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check21">
+                                            <label for="check21" class="accordeon__label" data-label="spare-parts" data-change-view>Baxi</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check22">
+                                            <label for="check22" class="accordeon__label" data-label="spare-parts" data-change-view>Bongioanni</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check23">
+                                            <label for="check23" class="accordeon__label" data-label="spare-parts" data-change-view>Saunier Duval</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check24">
+                                            <label for="check24" class="accordeon__label" data-label="spare-parts" data-change-view>Buderus</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check25">
+                                            <label for="check25" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check26">
+                                            <label for="check26" class="accordeon__label" data-label="spare-parts" data-change-view>Baxi</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check27">
+                                            <label for="check27" class="accordeon__label" data-label="spare-parts" data-change-view>Buderus</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check28">
+                                            <label for="check28" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check-29">
+                                            <label for="check29" class="accordeon__label" data-label="spare-parts" data-change-view>Baxi</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check30">
+                                            <label for="check30" class="accordeon__label" data-label="spare-parts" data-change-view>Buderus</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check31">
+                                            <label for="check31" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                        </div>
+
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check32">
+                                            <label for="check32" class="accordeon__label" data-label="spare-parts" data-change-view>Ariston</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check33">
+                                            <label for="check33" class="accordeon__label" data-label="spare-parts" data-change-view>Chaffoteaux&Maury</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check34">
+                                            <label for="check34" class="accordeon__label" data-label="spare-parts" data-change-view>Baxi</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check35">
+                                            <label for="check35" class="accordeon__label" data-label="spare-parts" data-change-view>Bongioanni</label>
+                                        </div>
+    
+                                        <div class="accordeon__options">
+                                            <input type="checkbox" name="check-filter" class="accordeon__inp" id="check36">
+                                            <label for="check36" class="accordeon__label" data-label="spare-parts" data-change-view>Saunier Duval</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="filters__btns">
+                                    <button class="filters__btn-show filters-container__show">Показать</button>
+                                    <button class="filters__btn-throw filter-container__btn-prev" data-close-arrow="#acc-mob2">Назад</button>
+                                </div>
+                            </div>
+
+                            <h3 class="accordeon__title accordeon__title--second filters-container__title-price" data-acc-title="2" data-change-view data-acc-mobile="#acc-mob3">Цена</h3>
+                            <div class="product-price">
+                                <div class="product-price__interval-price">
+                                    <div class="product-price__inputs" id="par2">
+                                        <input type="number" data-inp-range="0" name="price-start" placeholder="от 00 000" class="product-price__inp">
+                                        <span class="product-price__dash">—</span>
+                                        <input type="number" data-inp-range="1" name="price-end" placeholder="до 00 000" class="product-price__inp">
+                                    </div>
+                                    <div class="range product-price__range"></div>
+                                </div>
+                            </div>
+                            <button class="filters__btn-show filters-container__show" data-inp-parent="#par2">Показать</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="catalog-products">
+                    <div class="catalog-products__body">
+                    </div>
+                    <div class="pagination catalog-products__pag">
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="footer__body">
+        <div class="footer-top">
+            <div class="footer-top__body">
+                    <div class="footer-top__inf">
+                        <div class="title title--footer">
+                            <img src="img/logo2.svg" alt="logo2" class="title__logo">
+                            <p class="title__text title__text--footer">Детали для газовых котлов</p>
+                        </div>
+                    </div>
+                    <div class="footer-top__inf">
+                        <h2 class="footer__title footer__title--main footer__title--mobile-main">Интернет-магазин</h2>
+                        <div class="footer-top__hidden-mobile">
+                            <a href="catalog.html" class="footer__text footer__text--link">Каталог</a>
+                            <a href="delivery_and_payment.html" class="footer__text footer__text--link footer__text--last">Доставка и оплата</a>
+                        </div>
+                    </div>
+                    <div class="footer-top__inf">
+                        <h2 class="footer__title footer__title--main footer__title--mobile-main">Компания</h2>
+                        <div class="footer-top__hidden-mobile">
+                            <a href="about_company.html" class="footer__text footer__text--link">О компании</a>
+                            <a href="contacts.html" class="footer__text footer__text--link">Обратная связь</a>
+                            <a href="wholesale_buyers.html" class="footer__text footer__text--link footer__text--last">Оптовым покупателям</a>
+                        </div>
+                        <a href="contacts.html" class="footer__text footer__text--contacts">Контакты</a>
+                     </div>
+                    <div class="footer-top__inf">
+                        <h2 class="footer__title footer__title--main footer__title--title-contacts">Контакты</h2>
+
+                        <p class="footer__text footer__text--title">Наш адрес:</p>
+                        <div class="footer-top__about">
+                            <img src="img/footer-mark.svg" class="footer-top__icon">
+                            <h2 class="footer__title">г. Москва, ул. ... д.... </h2>
+                        </div>
+
+                        <p class="footer__text footer__text--title">Наш контактый телефон:</p>
+                        <div class="footer-top__about">
+                            <img src="img/phone.svg" class="footer-top__icon">
+                            <h2 class="footer__title">+7(8095) 555-55-55</h2>
+                        </div>
+
+                        <p class="footer__text footer__text--title">E-mail:</p>
+                        <div class="footer-top__about">
+                            <img src="img/mail.svg" class="footer-top__icon">
+                            <h2 class="footer__title">info@zapchasti.com.ru</h2>
+                        </div>
+                    </div>
+                    <div class="footer-top__bottom-menu">
+                        <div class="footer-top__cards">
+                            <p class="footer-top__text footer-top__text--title-card">Мы принимаем к оплате:</p>
+                            <div class="footer-top__pic">
+                                <img src="img/card1.svg" alt="apple pay" class="footer-bottom__icon">
+                                <img src="img/card2.svg" alt="google pay" class="footer-bottom__icon">
+                                <img src="img/card3.svg" alt="master card" class="footer-bottom__icon">
+                                <img src="img/card4.svg" alt="visa" class="footer-bottom__icon">
+                            </div>
+                        </div>
+                        <div class="footer-top__soc">
+                            <p class="footer-top__text">Мы в соцсети:</p>
+                            <div class="footer-top__pic">
+                                <a href="#"><img src="img/soc1.svg" alt="vk" class="footer-top__icon-soc"></a>
+                                <a href="#"><img src="img/soc2.svg" alt="vk" class="footer-top__icon-soc"></a>
+                                <a href="#"><img src="img/soc3.svg" alt="vk" class="footer-top__icon-soc"></a>
+                                <a href="#"><img src="img/soc4.svg" alt="vk" class="footer-top__icon-soc"></a>
+                            </div>
+                         </div>
+                    </div>
+            </div>
+            </div>
+            <div class="footer-bottom">
+                    <div class="footer-bottom__body">
+                        <p class="footer-bottom__text">© «Детали для газовых котлов» 2021.</p>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
